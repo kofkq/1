@@ -1,0 +1,757 @@
+Sub NewMacro()
+
+Range("$K$3").Value = =INDEX(Нормы!B:B,MATCH(L3,Нормы!C:C,0))
+Range("$O$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(N3,Нормы!C:C,0)),""-"")
+Range("$P$3").Value = =IFERROR(IF($H3=""ТП"",VLOOKUP($L3,Нормы!$C:$AK,6,0),IF($H3=""УУ"",VLOOKUP($L3,Нормы!$C:$AK,2,0),""-"")),""-"")
+Range("$Q$3").Value = =IFERROR(IF($H3=""ТП"",VLOOKUP($L3,Нормы!$C:$AK,7,0),IF($H3=""УУ"",VLOOKUP($L3,Нормы!$C:$AK,3,0),""0"")),""0"")
+Range("$R$3").Value = =IFERROR(IF($H3=""ТП"",VLOOKUP($L3,Нормы!$C:$AK,8,0),IF($H3=""УУ"",VLOOKUP($L3,Нормы!$C:$AK,4,0),""0"")),""0"")
+Range("$S$3").Value = =IFERROR(IF($H3=""ТП"",VLOOKUP($L3,Нормы!$C:$AK,9,0),IF($H3=""УУ"",VLOOKUP($L3,Нормы!$C:$AK,5,0),""0"")),""0"")
+Range("$T$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,12,0),""-"")
+Range("$U$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,13,0),""0"")
+Range("$V$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,14,0),""0"")
+Range("$W$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,15,0),""0"")
+Range("$X$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,16,0),""0"")
+Range("$Y$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,17,0),""0"")
+Range("$Z$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,21,0),""-"")
+Range("$AA$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,22,0),""0"")
+Range("$AB$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,23,0),""0"")
+Range("$AC$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,24,0),""0"")
+Range("$AD$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,25,0),""0"")
+Range("$AE$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AK,26,0),""0"")
+Range("$AF$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AO,36,0),""-"")
+Range("$AG$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AP,37,0),""0"")
+Range("$AH$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AP,38,0),""0"")
+Range("$AI$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AP,39,0),""0"")
+Range("$AJ$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AP,40,0),""0"")
+Range("$AK$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AT,41,0),""-"")
+Range("$AL$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AT,42,0),""0"")
+Range("$AM$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AT,43,0),""0"")
+Range("$AN$3").Value = =IFERROR(VLOOKUP($L3,Нормы!$C:$AT,44,0),""0"")
+Range("$AO$3").Value = =1+MOD(ROW()-3,3)
+Range("$AQ$3").Value = =IF(ISBLANK(AP3),CONCATENATE(AO3,P3,T3,Z3,AF3,AK3),CONCATENATE(AP3,P3,T3,Z3,AF3,AK3))
+Range("$AU$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,5,0)
+Range("$AV$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,6,0)
+Range("$AW$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,7,0)
+Range("$AX$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,8,0)
+Range("$AY$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,9,0)
+Range("$AZ$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,10,0)
+Range("$BA$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,11,0)
+Range("$BB$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,12,0)
+Range("$BC$3").Value = =VLOOKUP($AQ3,Нормы!$BK$4:$BW$632,13,0)
+Range("$BD$3").Value = =CH3+CM3+CR3+CW3+DB3+DG3+DL3+DQ3+DV3+EA3+EF3+EK3
+Range("$BE$3").Value = =CI3+CN3+CS3+CX3+DC3+DH3+DM3+DR3+DW3+EB3+EG3+EL3
+Range("$BF$3").Value = =CJ3+CO3+CT3+CY3+DD3+DI3+DN3+DS3+DX3+EC3+EH3+EM3
+Range("$BG$3").Value = =CK3+CP3+CU3+CZ3+DE3+DJ3+DO3+DT3+DY3+ED3+EI3+EN3
+Range("$BH$3").Value = =CL3+CQ3+CV3+DA3+DF3+DK3+DP3+DU3+DZ3+EE3+EJ3+EO3
+Range("$BI$3").Value = =AG3*$AF3*$G3
+Range("$BJ$3").Value = =AH3*$AF3*$G3
+Range("$BK$3").Value = =AI3*$AF3*$G3
+Range("$BL$3").Value = =AJ3*$AF3*$G3
+Range("$BM$3").Value = =AL3*$AK3*$G3
+Range("$BN$3").Value = =AM3*$AK3*$G3
+Range("$BO$3").Value = =AN3*$AK3*$G3
+Range("$BP$3").Value = =SUM(BQ3:BS3)
+Range("$BQ$3").Value = =Q3*$P3*$G3
+Range("$BR$3").Value = =R3*$P3*$G3
+Range("$BS$3").Value = =S3*$P3*$G3
+Range("$BT$3").Value = =SUM(BU3:BY3)
+Range("$BU$3").Value = =U3*$T3*$G3
+Range("$BV$3").Value = =V3*$T3*$G3
+Range("$BW$3").Value = =W3*$T3*$G3
+Range("$BX$3").Value = =X3*$T3*$G3
+Range("$BY$3").Value = =Y3*$T3*$G3
+Range("$BZ$3").Value = =SUM(CA3:CE3)
+Range("$CA$3").Value = =AA3*$Z3*$G3
+Range("$CB$3").Value = =AB3*$Z3*$G3
+Range("$CC$3").Value = =AC3*$Z3*$G3
+Range("$CD$3").Value = =AD3*$Z3*$G3
+Range("$CE$3").Value = =AE3*$Z3*$G3
+Range("$CF$3").Value = =SUM(BI3:BL3)
+Range("$CG$3").Value = =SUM(BM3:BO3)
+Range("$CH$3").Value = =IF($AR3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AR3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AR3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$CI$3").Value = =IF($AR3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AR3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AR3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$CJ$3").Value = =IF($AR3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AR3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AR3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$CK$3").Value = =IF($AR3=""ТО2"",$X3*$G3,IF($AR3=""ТО3"",$AD3*$G3,0))
+Range("$CL$3").Value = =IF($AR3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AR3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AR3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$CM$3").Value = =IF($AS3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AS3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AS3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$CN$3").Value = =IF($AS3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AS3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AS3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$CO$3").Value = =IF($AS3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AS3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AS3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$CP$3").Value = =IF($AS3=""ТО2"",$X3*$G3,IF($AS3=""ТО3"",$AD3*$G3,0))
+Range("$CQ$3").Value = =IF($AS3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AS3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AS3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$CR$3").Value = =IF($AT3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AT3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AT3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$CS$3").Value = =IF($AT3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AT3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AT3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$CT$3").Value = =IF($AT3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AT3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AT3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$CU$3").Value = =IF($AT3=""ТО2"",$X3*$G3,IF($AT3=""ТО3"",$AD3*$G3,0))
+Range("$CV$3").Value = =IF($AT3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AT3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AT3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$CW$3").Value = =IF($AU3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AU3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AU3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$CX$3").Value = =IF($AU3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AU3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AU3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$CY$3").Value = =IF($AU3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AU3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AU3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$CZ$3").Value = =IF($AU3=""ТО2"",$X3*$G3,IF($AU3=""ТО3"",$AD3*$G3,0))
+Range("$DA$3").Value = =IF($AU3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AU3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AU3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$DB$3").Value = =IF($AV3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AV3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AV3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$DC$3").Value = =IF($AV3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AV3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AV3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$DD$3").Value = =IF($AV3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AV3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AV3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$DE$3").Value = =IF($AV3=""ТО2"",$X3*$G3,IF($AV3=""ТО3"",$AD3*$G3,0))
+Range("$DF$3").Value = =IF($AV3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AV3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AV3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$DG$3").Value = =IF($AW3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AW3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AW3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$DH$3").Value = =IF($AW3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AW3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AW3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$DI$3").Value = =IF($AW3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AW3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AW3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$DJ$3").Value = =IF($AW3=""ТО2"",$X3*$G3,IF($AW3=""ТО3"",$AD3*$G3,0))
+Range("$DK$3").Value = =IF($AW3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AW3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AW3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$DL$3").Value = =IF($AX3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AX3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AX3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$DM$3").Value = =IF($AX3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AX3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AX3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$DN$3").Value = =IF($AX3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AX3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AX3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$DO$3").Value = =IF($AX3=""ТО2"",$X3*$G3,IF($AX3=""ТО3"",$AD3*$G3,0))
+Range("$DP$3").Value = =IF($AX3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AX3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AX3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$DQ$3").Value = =IF($AY3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AY3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AY3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$DR$3").Value = =IF($AY3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AY3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AY3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$DS$3").Value = =IF($AY3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AY3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AY3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$DT$3").Value = =IF($AY3=""ТО2"",$X3*$G3,IF($AY3=""ТО3"",$AD3*$G3,0))
+Range("$DU$3").Value = =IF($AY3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AY3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AY3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$DV$3").Value = =IF($AZ3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($AZ3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($AZ3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$DW$3").Value = =IF($AZ3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($AZ3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($AZ3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$DX$3").Value = =IF($AZ3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($AZ3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($AZ3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$DY$3").Value = =IF($AZ3=""ТО2"",$X3*$G3,IF($AZ3=""ТО3"",$AD3*$G3,0))
+Range("$DZ$3").Value = =IF($AZ3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($AZ3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($AZ3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$EA$3").Value = =IF($BA3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($BA3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($BA3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$EB$3").Value = =IF($BA3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($BA3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($BA3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$EC$3").Value = =IF($BA3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($BA3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($BA3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$ED$3").Value = =IF($BA3=""ТО2"",$X3*$G3,IF($BA3=""ТО3"",$AD3*$G3,0))
+Range("$EE$3").Value = =IF($BA3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($BA3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($BA3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$EF$3").Value = =IF($BB3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($BB3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($BB3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$EG$3").Value = =IF($BB3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($BB3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($BB3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$EH$3").Value = =IF($BB3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($BB3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($BB3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$EI$3").Value = =IF($BB3=""ТО2"",$X3*$G3,IF($BB3=""ТО3"",$AD3*$G3,0))
+Range("$EJ$3").Value = =IF($BB3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($BB3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($BB3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$EK$3").Value = =IF($BC3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 5*"",$Q3:$S3)*$G3,IF($BC3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 5*"",$U3:$Y3)*$G3,IF($BC3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 5*"",$AA3:$AE3)*$G3,0)))
+Range("$EL$3").Value = =IF($BC3=""ТО1"",SUMIF($Q$2:$S$2,""*КИПиА 6*"",$Q3:$S3)*$G3,IF($BC3=""ТО2"",SUMIF($U$2:$Y$2,""*КИПиА 6*"",$U3:$Y3)*$G3,IF($BC3=""ТО3"",SUMIF($AA$2:$AE$2,""*КИПиА 6*"",$AA3:$AE3)*$G3,0)))
+Range("$EM$3").Value = =IF($BC3=""ТО1"",SUMIF($Q$2:$S$2,""*Инженер КИПиА*"",$Q3:$S3)*$G3,IF($BC3=""ТО2"",SUMIF($U$2:$Y$2,""*Инженер КИПиА*"",$U3:$Y3)*$G3,IF($BC3=""ТО3"",SUMIF($AA$2:$AE$2,""*Инженер КИПиА*"",$AA3:$AE3)*$G3,0)))
+Range("$EN$3").Value = =IF($BC3=""ТО2"",$X3*$G3,IF($BC3=""ТО3"",$AD3*$G3,0))
+Range("$EO$3").Value = =IF($BC3=""ТО1"",SUMIF($Q$2:$S$2,""*Ведущий инженер АСУ*"",$Q3:$S3)*$G3,IF($BC3=""ТО2"",SUMIF($U$2:$Y$2,""*Ведущий инженер АСУ*"",$U3:$Y3)*$G3,IF($BC3=""ТО3"",SUMIF($AA$2:$AE$2,""*Ведущий инженер АСУ*"",$AA3:$AE3)*$G3,0)))
+Range("$EW$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",EQ3)),CONCATENATE(EQ3,""("",EP3,"")""),""""),IF(ISNUMBER(SEARCH(""ТО"",ES3)),CONCATENATE(""; "",ES3,""("",ER3,"")""),""""),IF(ISNUMBER(SEARCH(""ТО"",EU3)),CONCATENATE(""; "",EU3,""("",ET3,"")"",""""),IF(ISNUMBER(SEARCH(""Нет"",EQ3)),CONCATENATE(EQ3),"""")))
+Range("$EY$3").Value = =((IF($EQ3=""ТО1"",$Q3,IF($EQ3=""ТО2"",$U3,IF($EQ3=""ТО3"",$AA3,IF($EQ3=""ДЕЖ"",0,IF($EQ3=""ВНР"",$AL3,))))))*IF(ISBLANK($EP3),$G3,$EP3))+((IF($ES3=""ТО1"",$Q3,IF($ES3=""ТО2"",$U3,IF($ES3=""ТО3"",$AA3,IF($ES3=""ДЕЖ"",0,IF($ES3=""ВНР"",$AL3,))))))*IF(ISBLANK($ER3),$G3,$ER3))+((IF($EU3=""ТО1"",$Q3,IF($EU3=""ТО2"",$U3,IF($EU3=""ТО3"",$AA3,IF($EU3=""ДЕЖ"",0,IF($EU3=""ВНР"",$AL3,))))))*IF(ISBLANK($ET3),$G3,$ET3))
+Range("$EZ$3").Value = =((IF($EQ3=""ТО1"",$R3,IF($EQ3=""ТО2"",$V3,IF($EQ3=""ТО3"",$AB3,IF($EQ3=""ДЕЖ"",$AG3,IF($EQ3=""ВНР"",$AM3,))))))*IF(ISBLANK($EP3),$G3,$EP3))+((IF($ES3=""ТО1"",$R3,IF($ES3=""ТО2"",$V3,IF($ES3=""ТО3"",$AB3,IF($ES3=""ДЕЖ"",$AG3,IF($ES3=""ВНР"",$AM3,))))))*IF(ISBLANK($ER3),$G3,$ER3))+((IF($EU3=""ТО1"",$R3,IF($EU3=""ТО2"",$V3,IF($EU3=""ТО3"",$AB3,IF($EU3=""ДЕЖ"",$AG3,IF($EU3=""ВНР"",$AM3,))))))*IF(ISBLANK($ET3),$G3,$ET3))
+Range("$FA$3").Value = =((IF($EQ3=""ТО1"",$S3,IF($EQ3=""ТО2"",$W3,IF($EQ3=""ТО3"",$AC3,IF($EQ3=""ДЕЖ"",$AH3,IF($EQ3=""ВНР"",$AN3,))))))*IF(ISBLANK($EP3),$G3,$EP3))+((IF($ES3=""ТО1"",$S3,IF($ES3=""ТО2"",$W3,IF($ES3=""ТО3"",$AC3,IF($ES3=""ДЕЖ"",$AH3,IF($ES3=""ВНР"",$AN3,))))))*IF(ISBLANK($ER3),$G3,$ER3))+((IF($EU3=""ТО1"",$S3,IF($EU3=""ТО2"",$W3,IF($EU3=""ТО3"",$AC3,IF($EU3=""ДЕЖ"",$AH3,IF($EU3=""ВНР"",$AN3,))))))*IF(ISBLANK($ET3),$G3,$ET3))
+Range("$FB$3").Value = =((IF($EQ3=""ТО1"",0,IF($EQ3=""ТО2"",$X3,IF($EQ3=""ТО3"",$AD3,IF($EQ3=""ДЕЖ"",$AI3,IF($EQ3=""ВНР"",0,))))))*IF(ISBLANK($EP3),$G3,$EP3))+((IF($ES3=""ТО1"",0,IF($ES3=""ТО2"",$X3,IF($ES3=""ТО3"",$AD3,IF($ES3=""ДЕЖ"",$AI3,IF($ES3=""ВНР"",0,))))))*IF(ISBLANK($ER3),$G3,$ER3))+((IF($EU3=""ТО1"",0,IF($EU3=""ТО2"",$X3,IF($EU3=""ТО3"",$AD3,IF($EU3=""ДЕЖ"",$AI3,IF($EU3=""ВНР"",0,))))))*IF(ISBLANK($ET3),$G3,$ET3))
+Range("$FC$3").Value = =((IF($EQ3=""ТО1"",0,IF($EQ3=""ТО2"",$Y3,IF($EQ3=""ТО3"",$AE3,IF($EQ3=""ДЕЖ"",$AJ3,IF($EQ3=""ВНР"",0,))))))*IF(ISBLANK($EP3),$G3,$EP3))+((IF($ES3=""ТО1"",0,IF($ES3=""ТО2"",$Y3,IF($ES3=""ТО3"",$AE3,IF($ES3=""ДЕЖ"",$AJ3,IF($ES3=""ВНР"",0,))))))*IF(ISBLANK($ER3),$G3,$ER3))+((IF($EU3=""ТО1"",0,IF($EU3=""ТО2"",$Y3,IF($EU3=""ТО3"",$AE3,IF($EU3=""ДЕЖ"",$AJ3,IF($EU3=""ВНР"",0,))))))*IF(ISBLANK($ET3),$G3,$ET3))
+Range("$FD$3").Value = =IF(M3=""ДА"",VLOOKUP(L3,Нормы!$C:$AK,27,0),0)
+Range("$FE$3").Value = =IF(M3=""ДА"",VLOOKUP(L3,Нормы!$C:$AK,28,0),0)
+Range("$FF$3").Value = =IF(M3=""ДА"",VLOOKUP(L3,Нормы!$C:$AK,30,0),0)
+Range("$FG$3").Value = =IF(AND($M3=""ДА"",VLOOKUP($L3,Нормы!$C:$AK,27,0)<1),""x"","" "")
+Range("$FK$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FL$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FM$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FN$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FO$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FP$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FQ$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FR$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FS$3").Value = =IF(AND($FD3=12,$M3=""ДА""),""ИК_ | МК_"",IF($FG3=""x"",""ИК_ | МК_"",""""))
+Range("$FT$3").Value = =SUMIF($FV$2:$GS$2,""*КИПиА 5*"",$FV3:$GS3)
+Range("$FU$3").Value = =SUMIF($FV$2:$GS$2,""*Инженер КИП*"",$FV3:$GS3)
+Range("$FV$3").Value = =IF($FH3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$FW$3").Value = =IF($FH3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$FX$3").Value = =IF($FI3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$FY$3").Value = =IF($FI3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$FZ$3").Value = =IF($FJ3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GA$3").Value = =IF($FJ3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GB$3").Value = =IF($FK3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GC$3").Value = =IF($FK3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GD$3").Value = =IF($FL3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GE$3").Value = =IF($FL3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GF$3").Value = =IF($FM3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GG$3").Value = =IF($FM3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GH$3").Value = =IF($FN3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GI$3").Value = =IF($FN3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GJ$3").Value = =IF($FO3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GK$3").Value = =IF($FM3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GL$3").Value = =IF($FP3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GM$3").Value = =IF($FP3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GN$3").Value = =IF($FQ3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GO$3").Value = =IF($FQ3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GP$3").Value = =IF($FR3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GQ$3").Value = =IF($FR3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GR$3").Value = =IF($FS3=""ИК_ | МК_"",$FE3*$G3,0)
+Range("$GS$3").Value = =IF($FS3=""ИК_ | МК_"",$FF3*$G3,0)
+Range("$GX$3").Value = =IF($GU3=""Выполнено"",$FE3,0)*IF(ISBLANK($GT3),$G3,$GT3)
+Range("$GY$3").Value = =IF($GU3=""Выполнено"",$FF3,0)*IF(ISBLANK($GT3),$G3,$GT3)
+Range("$GZ$3").Value = =IF(ISBLANK($N3),""-"",VLOOKUP($N3,Нормы!$C:$AK,33,0))
+Range("$HA$3").Value = =IF(ISBLANK($N3),""0"",VLOOKUP($N3,Нормы!$C:$AK,34,0))
+Range("$HB$3").Value = =IF(ISBLANK($N3),""0"",VLOOKUP($N3,Нормы!$C:$AK,35,0))
+Range("$HC$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HD$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HE$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HF$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HG$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HH$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HI$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HJ$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HK$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HL$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HM$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HN$3").Value = =IF($GZ3=12,""КМХ"",IF($GZ3=36,""3КМХ"",""""))
+Range("$HO$3").Value = =SUMIF($HQ$2:$IN$2,""*КИПиА 6*"",$HQ3:$IN3)
+Range("$HP$3").Value = =SUMIF($HQ$2:$IN$2,""*Инженер КИП*"",$HQ3:$IN3)
+Range("$HQ$3").Value = =IF($HC3=""КМХ"",$HA3*$G3,IF($HC3=""3КМХ"",$HA3*$G3*3,0))
+Range("$HR$3").Value = =IF($HC3=""КМХ"",$HB3*$G3,IF($HC3=""3КМХ"",$HB3*$G3*3,0))
+Range("$HS$3").Value = =IF($HD3=""КМХ"",$HA3*$G3,IF($HD3=""3КМХ"",$HA3*$G3*3,0))
+Range("$HT$3").Value = =IF($HD3=""КМХ"",$HB3*$G3,IF($HD3=""3КМХ"",$HB3*$G3*3,0))
+Range("$HU$3").Value = =IF($HE3=""КМХ"",$HA3*$G3,IF($HE3=""3КМХ"",$HA3*$G3*3,0))
+Range("$HV$3").Value = =IF($HE3=""КМХ"",$HB3*$G3,IF($HE3=""3КМХ"",$HB3*$G3*3,0))
+Range("$HW$3").Value = =IF($HF3=""КМХ"",$HA3*$G3,IF($HF3=""3КМХ"",$HA3*$G3*3,0))
+Range("$HX$3").Value = =IF($HF3=""КМХ"",$HB3*$G3,IF($HF3=""3КМХ"",$HB3*$G3*3,0))
+Range("$HY$3").Value = =IF($HG3=""КМХ"",$HA3*$G3,IF($HG3=""3КМХ"",$HA3*$G3*3,0))
+Range("$HZ$3").Value = =IF($HG3=""КМХ"",$HB3*$G3,IF($HG3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IA$3").Value = =IF($HH3=""КМХ"",$HA3*$G3,IF($HH3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IB$3").Value = =IF($HH3=""КМХ"",$HB3*$G3,IF($HH3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IC$3").Value = =IF($HI3=""КМХ"",$HA3*$G3,IF($HI3=""3КМХ"",$HA3*$G3*3,0))
+Range("$ID$3").Value = =IF($HI3=""КМХ"",$HB3*$G3,IF($HI3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IE$3").Value = =IF($HJ3=""КМХ"",$HA3*$G3,IF($HJ3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IF$3").Value = =IF($HJ3=""КМХ"",$HB3*$G3,IF($HJ3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IG$3").Value = =IF($HK3=""КМХ"",$HA3*$G3,IF($HK3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IH$3").Value = =IF($HK3=""КМХ"",$HB3*$G3,IF($HK3=""3КМХ"",$HB3*$G3*3,0))
+Range("$II$3").Value = =IF($HL3=""КМХ"",$HA3*$G3,IF($HL3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IJ$3").Value = =IF($HL3=""КМХ"",$HB3*$G3,IF($HL3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IK$3").Value = =IF($HM3=""КМХ"",$HA3*$G3,IF($HM3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IL$3").Value = =IF($HM3=""КМХ"",$HB3*$G3,IF($HM3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IM$3").Value = =IF($HN3=""КМХ"",$HA3*$G3,IF($HN3=""3КМХ"",$HA3*$G3*3,0))
+Range("$IN$3").Value = =IF($HN3=""КМХ"",$HB3*$G3,IF($HN3=""3КМХ"",$HB3*$G3*3,0))
+Range("$IQ$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(IO3,Нормы!C:C,0)),"""")
+Range("$IT$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(IR3,Нормы!C:C,0)),"""")
+Range("$IW$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(IU3,Нормы!C:C,0)),"""")
+Range("$IZ$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(IX3,Нормы!C:C,0)),"""")
+Range("$JC$3").Value = =IFERROR(INDEX(Нормы!B:B,MATCH(JA3,Нормы!C:C,0)),"""")
+Range("$JD$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,6,0),0)
+Range("$JE$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,6,0),0)
+Range("$JF$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,6,0),0)
+Range("$JG$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,6,0),0)
+Range("$JH$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,6,0),0)
+Range("$JI$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,10,0),0)
+Range("$JJ$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,11,0),0)
+Range("$JK$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,10,0),0)
+Range("$JL$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,11,0),0)
+Range("$JM$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,10,0),0)
+Range("$JN$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,11,0),0)
+Range("$JO$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,10,0),0)
+Range("$JP$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,11,0),0)
+Range("$JQ$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,10,0),0)
+Range("$JR$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,11,0),0)
+Range("$JS$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,12,0),0)
+Range("$JT$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,12,0),0)
+Range("$JU$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,12,0),0)
+Range("$JV$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,12,0),0)
+Range("$JW$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,12,0),0)
+Range("$JX$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,16,0),0)
+Range("$JY$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,17,0),0)
+Range("$JZ$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,16,0),0)
+Range("$KA$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,17,0),0)
+Range("$KB$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,16,0),0)
+Range("$KC$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,17,0),0)
+Range("$KD$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,16,0),0)
+Range("$KE$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,17,0),0)
+Range("$KF$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,16,0),0)
+Range("$KG$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,17,0),0)
+Range("$KH$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,18,0),0)
+Range("$KI$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,18,0),0)
+Range("$KJ$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,18,0),0)
+Range("$KK$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,18,0),0)
+Range("$KL$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,18,0),0)
+Range("$KM$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,19,0),0)
+Range("$KN$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,20,0),0)
+Range("$KO$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,19,0),0)
+Range("$KP$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,20,0),0)
+Range("$KQ$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,19,0),0)
+Range("$KR$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,20,0),0)
+Range("$KS$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,19,0),0)
+Range("$KT$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,20,0),0)
+Range("$KU$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,19,0),0)
+Range("$KV$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,20,0),0)
+Range("$KW$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,21,0),0)
+Range("$KX$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,21,0),0)
+Range("$KY$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,21,0),0)
+Range("$KZ$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,21,0),0)
+Range("$LA$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,21,0),0)
+Range("$LB$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,25,0),0)
+Range("$LC$3").Value = =IFERROR(VLOOKUP($IO3,Нормы!$C:$AK,26,0),0)
+Range("$LD$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,25,0),0)
+Range("$LE$3").Value = =IFERROR(VLOOKUP($IR3,Нормы!$C:$AK,26,0),0)
+Range("$LF$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,25,0),0)
+Range("$LG$3").Value = =IFERROR(VLOOKUP($IU3,Нормы!$C:$AK,26,0),0)
+Range("$LH$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,25,0),0)
+Range("$LI$3").Value = =IFERROR(VLOOKUP($IX3,Нормы!$C:$AK,26,0),0)
+Range("$LJ$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,25,0),0)
+Range("$LK$3").Value = =IFERROR(VLOOKUP($JA3,Нормы!$C:$AK,26,0),0)
+Range("$LP$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,6,0),"""")
+Range("$LQ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,7,0),"""")
+Range("$LR$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,8,0),"""")
+Range("$LS$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,9,0),"""")
+Range("$LT$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,10,0),"""")
+Range("$LU$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,11,0),"""")
+Range("$LV$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,12,0),"""")
+Range("$LW$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JD3,$JS3,$KH3,$KW3),Нормы!$CE:$CQ,13,0),"""")
+Range("$LX$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,2,0),"""")
+Range("$LY$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,3,0),"""")
+Range("$LZ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,4,0),"""")
+Range("$MA$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,5,0),"""")
+Range("$MB$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,6,0),"""")
+Range("$MC$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,7,0),"""")
+Range("$MD$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,8,0),"""")
+Range("$ME$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,9,0),"""")
+Range("$MF$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,10,0),"""")
+Range("$MG$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,11,0),"""")
+Range("$MH$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,12,0),"""")
+Range("$MI$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JE3,$JT3,$KI3,$KX3),Нормы!$CE:$CQ,13,0),"""")
+Range("$MJ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,2,0),"""")
+Range("$MK$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,3,0),"""")
+Range("$ML$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,4,0),"""")
+Range("$MM$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,5,0),"""")
+Range("$MN$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,6,0),"""")
+Range("$MO$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,7,0),"""")
+Range("$MP$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,8,0),"""")
+Range("$MQ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,9,0),"""")
+Range("$MR$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,10,0),"""")
+Range("$MS$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,11,0),"""")
+Range("$MT$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,12,0),"""")
+Range("$MU$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JF3,$JU3,$KJ3,$KY3),Нормы!$CE:$CQ,13,0),"""")
+Range("$MV$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,2,0),"""")
+Range("$MW$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,3,0),"""")
+Range("$MX$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,4,0),"""")
+Range("$MY$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,5,0),"""")
+Range("$MZ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,6,0),"""")
+Range("$NA$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,7,0),"""")
+Range("$NB$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,8,0),"""")
+Range("$NC$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,9,0),"""")
+Range("$ND$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,10,0),"""")
+Range("$NE$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,11,0),"""")
+Range("$NF$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,12,0),"""")
+Range("$NG$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JG3,$JV3,$KK3,$KZ3),Нормы!$CE:$CQ,13,0),"""")
+Range("$NH$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,2,0),"""")
+Range("$NI$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,3,0),"""")
+Range("$NJ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,4,0),"""")
+Range("$NK$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,5,0),"""")
+Range("$NL$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,6,0),"""")
+Range("$NM$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,7,0),"""")
+Range("$NN$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,8,0),"""")
+Range("$NO$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,9,0),"""")
+Range("$NP$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,11,0),"""")
+Range("$NQ$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,11,0),"""")
+Range("$NR$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,12,0),"""")
+Range("$NS$3").Value = =IFERROR(VLOOKUP(CONCATENATE(IF(ISBLANK($AP3),$AO3,LEFT($AP3,1)),$JH3,$JW3,$KL3,$LA3),Нормы!$CE:$CQ,13,0),"""")
+Range("$NT$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LL3)),CONCATENATE(LL3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",LX3)),CONCATENATE(""
+"",LX3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MJ3)),CONCATENATE(""
+"",MJ3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",MV3)),CONCATENATE(""
+"",MV3,"" "",$IX3),""""))
+Range("$NU$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LM3)),CONCATENATE(LM3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",LY3)),CONCATENATE(""
+"",LY3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MK3)),CONCATENATE(""
+"",MK3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",MW3)),CONCATENATE(""
+"",MW3,"" "",$IX3),""""))
+Range("$NV$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LN3)),CONCATENATE(LN3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",LZ3)),CONCATENATE(""
+"",LZ3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",ML3)),CONCATENATE(""
+"",ML3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",MX3)),CONCATENATE(""
+"",MX3,"" "",$IX3),""""))
+Range("$NW$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LO3)),CONCATENATE(LO3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MA3)),CONCATENATE(""
+"",MA3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MM3)),CONCATENATE(""
+"",MM3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",MY3)),CONCATENATE(""
+"",MY3,"" "",$IX3),""""))
+Range("$NX$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LP3)),CONCATENATE(LP3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MB3)),CONCATENATE(""
+"",MB3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MN3)),CONCATENATE(""
+"",MN3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",MZ3)),CONCATENATE(""
+"",MZ3,"" "",$IX3),""""))
+Range("$NY$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LQ3)),CONCATENATE(LQ3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MC3)),CONCATENATE(""
+"",MC3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MO3)),CONCATENATE(""
+"",MO3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NA3)),CONCATENATE(""
+"",NA3,"" "",$IX3),""""))
+Range("$NZ$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LR3)),CONCATENATE(LR3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MD3)),CONCATENATE(""
+"",MD3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MP3)),CONCATENATE(""
+"",MP3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NB3)),CONCATENATE(""
+"",NB3,"" "",$IX3),""""))
+Range("$OA$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LS3)),CONCATENATE(LS3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",ME3)),CONCATENATE(""
+"",ME3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MQ3)),CONCATENATE(""
+"",MQ3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NC3)),CONCATENATE(""
+"",NC3,"" "",$IX3),""""))
+Range("$OB$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LT3)),CONCATENATE(LT3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MF3)),CONCATENATE(""
+"",MF3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MR3)),CONCATENATE(""
+"",MR3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",ND3)),CONCATENATE(""
+"",ND3,"" "",$IX3),""""))
+Range("$OC$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LU3)),CONCATENATE(LU3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MG3)),CONCATENATE(""
+"",MG3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MS3)),CONCATENATE(""
+"",MS3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NE3)),CONCATENATE(""
+"",NE3,"" "",$IX3),""""))
+Range("$OD$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LV3)),CONCATENATE(LV3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MH3)),CONCATENATE(""
+"",MH3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MT3)),CONCATENATE(""
+"",MT3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NF3)),CONCATENATE(""
+"",NF3,"" "",$IX3),""""))
+Range("$OE$3").Value = =CONCATENATE(IF(ISNUMBER(SEARCH(""ТО"",LW3)),CONCATENATE(LW3,"" "",$IO3),""""),IF(ISNUMBER(SEARCH(""ТО"",MI3)),CONCATENATE(""
+"",MI3,"" "",$IR3),""""),IF(ISNUMBER(SEARCH(""ТО"",MU3)),CONCATENATE(""
+"",MU3,"" "",$IU3),""""),IF(ISNUMBER(SEARCH(""ТО"",NG3)),CONCATENATE(""
+"",NG3,"" "",$IX3),""""))
+Range("$OF$3").Value = =(COUNTIF($LL3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MV3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OG$3").Value = =(COUNTIF($LL3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MV3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LL3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LX3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MJ3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MV3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NH3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OH$3").Value = =(COUNTIF($LM3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MW3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OI$3").Value = =(COUNTIF($LM3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MW3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LM3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LY3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MK3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MW3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NI3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OJ$3").Value = =(COUNTIF($LN3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MX3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OK$3").Value = =(COUNTIF($LN3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MX3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LN3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($LZ3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($ML3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MX3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NJ3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OL$3").Value = =(COUNTIF($LO3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MY3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OM$3").Value = =(COUNTIF($LO3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MY3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LO3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MA3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MM3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MY3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NK3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$ON$3").Value = =(COUNTIF($LP3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MZ3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OO$3").Value = =(COUNTIF($LP3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($MZ3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LP3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MB3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MN3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$MZ3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NL3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OP$3").Value = =(COUNTIF($LQ3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NA3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OQ$3").Value = =(COUNTIF($LQ3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NA3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LQ3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MC3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MO3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NA3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NM3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OR$3").Value = =(COUNTIF($LR3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NB3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OS$3").Value = =(COUNTIF($LR3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NB3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LR3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MD3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MP3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NB3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NN3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OT$3").Value = =(COUNTIF($LS3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NC3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OU$3").Value = =(COUNTIF($LS3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NC3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LS3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($ME3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MQ3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NC3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NO3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OV$3").Value = =(COUNTIF($LT3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$ND3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OW$3").Value = =(COUNTIF($LT3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($ND3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LT3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MF3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MR3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$ND3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NP3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OX$3").Value = =(COUNTIF($LU3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NE3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OY$3").Value = =(COUNTIF($LU3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NE3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LU3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MG3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MS3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NE3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NQ3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$OZ$3").Value = =(COUNTIF($LV3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NF3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$PA$3").Value = =(COUNTIF($LV3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NF3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LV3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MH3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MT3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NF3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NR3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$PB$3").Value = =(COUNTIF($LW3,""*М*"")*JI3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*М*"")*JK3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*М*"")*JM3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*М*"")*JO3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*М*"")*JQ3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*К*"")*JX3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*К*"")*JZ3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*К*"")*KB3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*К*"")*KD3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*К*"")*KF3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*П*"")*KM3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*П*"")*KO3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*П*"")*KQ3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*П*"")*KS3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*П*"")*KU3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*Г*"")*LB3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*Г*"")*LD3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*Г*"")*LF3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NG3,""*Г*"")*LH3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*Г*"")*LJ3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$PC$3").Value = =(COUNTIF($LW3,""*М*"")*JJ3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*М*"")*JL3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*М*"")*JN3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*М*"")*JP3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*М*"")*JR3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*К*"")*JY3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*К*"")*KA3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*К*"")*KC3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*К*"")*KE3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*К*"")*KG3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*П*"")*KN3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*П*"")*KP3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*П*"")*KR3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF($NG3,""*П*"")*KT3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*П*"")*KV3)*IF(ISBLANK($JB3),$G3,$JB3)+(COUNTIF($LW3,""*Г*"")*LC3)*IF(ISBLANK($IP3),$G3,$IP3)+(COUNTIF($MI3,""*Г*"")*LE3)*IF(ISBLANK($IS3),$G3,$IS3)+(COUNTIF($MU3,""*Г*"")*LG3)*IF(ISBLANK($IV3),$G3,$IV3)+(COUNTIF(
+$NG3,""*Г*"")*LI3)*IF(ISBLANK($IY3),$G3,$IY3)+(COUNTIF($NS3,""*Г*"")*LK3)*IF(ISBLANK($JB3),$G3,$JB3)
+Range("$PD$3").Value = =PG3+PJ3+PM3+PP3
+Range("$PE$3").Value = =PH3+PK3+PN3+PQ3
+Range("$PF$3").Value = =SUM(PG3:PH3)
+Range("$PG$3").Value = =IF(ISBLANK($IP3),JI3*$G3,JI3*$IP3)*$JD3+IF(ISBLANK($IS3),JK3*$G3,JK3*$IS3)*$JE3+IF(ISBLANK($IV3),JM3*$G3,JM3*$IV3)*$JF3+IF(ISBLANK($IY3),JO3*$G3,JO3*$IY3)*$JG3+IF(ISBLANK($JB3),JQ3*$G3,JQ3*$JB3)*$JH3
+Range("$PH$3").Value = =IF(ISBLANK($IP3),JJ3*$G3,JJ3*$IP3)*$JD3+IF(ISBLANK($IS3),JL3*$G3,JL3*$IS3)*$JE3+IF(ISBLANK($IV3),JN3*$G3,JN3*$IV3)*$JF3+IF(ISBLANK($IY3),JP3*$G3,JP3*$IY3)*$JG3+IF(ISBLANK($JB3),JR3*$G3,JR3*$JB3)*$JH3
+Range("$PI$3").Value = =SUM(PJ3:PK3)
+Range("$PJ$3").Value = =IF(ISBLANK($IP3),JX3*$G3,JX3*$IP3)*$JS3+IF(ISBLANK($IS3),JZ3*$G3,JZ3*$IS3)*$JT3+IF(ISBLANK($IV3),KB3*$G3,KB3*$IV3)*$JU3+IF(ISBLANK($IY3),KD3*$G3,KD3*$IY3)*$JV3+IF(ISBLANK($JB3),KF3*$G3,KF3*$JB3)*$JW3
+Range("$PK$3").Value = =IF(ISBLANK($IP3),JY3*$G3,JY3*$IP3)*$JS3+IF(ISBLANK($IS3),KA3*$G3,KA3*$IS3)*$JT3+IF(ISBLANK($IV3),KC3*$G3,KC3*$IV3)*$JU3+IF(ISBLANK($IY3),KE3*$G3,KE3*$IY3)*$JV3+IF(ISBLANK($JB3),KG3*$G3,KG3*$JB3)*$JW3
+Range("$PL$3").Value = =SUM(PM3:PN3)
+Range("$PM$3").Value = =IF(ISBLANK($IP3),KM3*$G3,KM3*$IP3)*$KH3+IF(ISBLANK($IS3),KO3*$G3,KO3*$IS3)*$KI3+IF(ISBLANK($IV3),KQ3*$G3,KQ3*$IV3)*$KJ3+IF(ISBLANK($IY3),KS3*$G3,KS3*$IY3)*$KK3+IF(ISBLANK($JB3),KU3*$G3,KU3*$JB3)*$KL3
+Range("$PN$3").Value = =IF(ISBLANK($IP3),KN3*$G3,KN3*$IP3)*$KH3+IF(ISBLANK($IS3),KP3*$G3,KP3*$IS3)*$KI3+IF(ISBLANK($IV3),KR3*$G3,KR3*$IV3)*$KJ3+IF(ISBLANK($IY3),KT3*$G3,KT3*$IY3)*$KK3+IF(ISBLANK($JB3),KV3*$G3,KV3*$JB3)*$KL3
+Range("$PO$3").Value = =SUM(PP3:PQ3)
+Range("$PP$3").Value = =IF(ISBLANK($IP3),LB3*$G3,LB3*$IP3)*$KW3+IF(ISBLANK($IS3),LD3*$G3,LD3*$IS3)*$KX3+IF(ISBLANK($IV3),LF3*$G3,LF3*$IV3)*$KY3+IF(ISBLANK($IY3),LH3*$G3,LH3*$IY3)*$KZ3+IF(ISBLANK($JB3),LJ3*$G3,LJ3*$JB3)*$LA3
+Range("$PQ$3").Value = =IF(ISBLANK($IP3),LC3*$G3,LC3*$IP3)*$KW3+IF(ISBLANK($IS3),LE3*$G3,LE3*$IS3)*$KX3+IF(ISBLANK($IV3),LG3*$G3,LG3*$IV3)*$KY3+IF(ISBLANK($IY3),LI3*$G3,LI3*$IY3)*$KZ3+IF(ISBLANK($JB3),LK3*$G3,LK3*$JB3)*$LA3
+Range("$PV$3").Value = =IF($PR3=""Выполнено"",OL3,0)
+Range("$PW$3").Value = =IF($PR3=""Выполнено"",OM3,0)
+Range("$PX$3").Value = =CONCATENATE(IF(ISBLANK(EX3),"""",""КИП: ""),IF(ISBLANK(EX3),"""",EX3),IF(ISBLANK(GW3),"""",""
+СБиС: ""),IF(ISBLANK(GW3),"""",GW3),IF(ISBLANK(PU3),"""",""
+АСУТП: ""),IF(ISBLANK(PU3),"""",PU3))
+Range("$PY$3").Value = =IF(OR(ISNUMBER(SEARCH(""ТО"",EQ3)),(ISNUMBER(SEARCH(""ДЕЖ"",EQ3))),GU3=""Выполнено"",PR3=""Выполнено""),""есть ТО"",""нет ТО"")
+Range("$QB$3").Value = =$I3/$QA3*2
+Range("$QD$3").Value = =$QB3/$QC3
+Range("$QE$3").Value = =$QD3+1
+Range("$QF$3").Value = =(BD3+BM3+FT3)*QE3
+Range("$QG$3").Value = =(BE3+BI3+BN3)*QE3
+Range("$QH$3").Value = =(BF3+BJ3+BO3+FU3)*QE3
+Range("$QI$3").Value = =(BG3+BK3+PD3)*QE3
+Range("$QJ$3").Value = =(BH3+PE3+BL3)*QE3
+Range("$QN$3").Value = =QF3/$QC3*$QK3
+Range("$QO$3").Value = =QG3/$QC3*$QK3
+Range("$QP$3").Value = =QH3/$QC3*$QK3
+Range("$QQ$3").Value = =QI3/$QC3*$QK3
+Range("$QR$3").Value = =QJ3/$QC3*$QK3
+Range("$QT$3").Value = =QF3/$QC3*$QL3
+Range("$QU$3").Value = =QG3/$QC3*$QL3
+Range("$QV$3").Value = =QH3/$QC3*$QL3
+Range("$QW$3").Value = =QI3/$QC3*$QL3
+Range("$QX$3").Value = =QJ3/$QC3*$QL3
+Range("$QY$3").Value = =SUM(QZ3:RD3)
+Range("$QZ$3").Value = =QF3+QN3+QT3
+Range("$RA$3").Value = =QG3+QO3+QU3
+Range("$RB$3").Value = =QH3+QP3+QV3
+Range("$RC$3").Value = =(QI3+QQ3+QW3)
+Range("$RD$3").Value = =QJ3+QR3+QX3
+Range("$RE$3").Value = =SUM(RF3:RJ3)
+Range("$RF$3").Value = =(RK3+RP3+RU3+RZ3+SE3+SJ3+SO3+ST3+SY3+TD3+TI3+TN3)
+Range("$RG$3").Value = =(RL3+RQ3+RV3+SA3+SF3+SK3+SP3+SU3+SZ3+TE3+TJ3+TO3)
+Range("$RH$3").Value = =(RM3+RR3+RW3+SB3+SG3+SL3+SQ3+SV3+TA3+TF3+TK3+TP3)
+Range("$RI$3").Value = =(RN3+RS3+RX3+SC3+SH3+SM3+SR3+SW3+TB3+TG3+TL3+TQ3)
+Range("$RJ$3").Value = =(RO3+RT3+RY3+SD3+SI3+SN3+SS3+SX3+TC3+TH3+TM3+TR3)
+Range("$RK$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*январь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*январь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*январь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RL$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*январь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*январь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*январь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RM$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*январь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* январь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* январь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RN$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*январь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* январь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*январь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RO$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*январь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* январь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*январь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RP$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*февраль
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*февраль
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*февраль
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RQ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*февраль
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*февраль
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*февраль
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RR$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*февраль
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* февраль
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* февраль
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RS$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*февраль
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* февраль
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*февраль
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RT$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*февраль
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* февраль
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*февраль
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RU$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*март
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*март
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*март
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RV$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*март
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*март
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*март
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RW$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*март
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* март
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* март
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RX$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*март
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* март
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*март
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RY$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*март
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*март
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*март
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$RZ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*апрель
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*апрель
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*апрель
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SA$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*апрель
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*апрель
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*апрель
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SB$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*апрель
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* апрель
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* апрель
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SC$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*апрель
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* апрель
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*апрель
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SD$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*апрель
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* апрель
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*апрель
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SE$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*май
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*май
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*май
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SF$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*май
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*май
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*май
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SG$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*май
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* май
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* май
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SH$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*май
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* май
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*май
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SI$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*май
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* май
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*май
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SJ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июнь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*июнь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*июнь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SK$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июнь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*июнь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*июнь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SL$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* июнь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июнь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* июнь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SM$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июнь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июнь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*июнь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SN$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июнь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июнь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*июнь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SO$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июль
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*июль
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*июль
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SP$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июль
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*июль
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*июль
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SQ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* июль
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июль
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* июль
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SR$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июль
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июль
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*июль
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SS$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*июль
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* июль
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*июль
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$ST$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*август
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*август
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*август
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SU$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*август
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*август
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*август
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SV$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* август
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* август
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* август
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SW$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*август
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* август
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*август
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SX$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*август
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* август
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*август
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SY$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*сентябрь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*сентябрь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*сентябрь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$SZ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*сентябрь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*сентябрь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*сентябрь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TA$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* сентябрь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* сентябрь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* сентябрь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TB$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*сентябрь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* сентябрь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*сентябрь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TC$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*сентябрь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* сентябрь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*сентябрь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TD$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*октябрь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*октябрь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*октябрь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TE$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*октябрь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*октябрь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*октябрь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TF$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* октябрь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* октябрь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* октябрь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TG$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*октябрь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* октябрь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*октябрь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TH$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*октябрь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* октябрь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*октябрь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TI$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*ноябрь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*ноябрь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*ноябрь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TJ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*ноябрь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*ноябрь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*ноябрь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TK$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* ноябрь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* ноябрь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* ноябрь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TL$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*ноябрь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* ноябрь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*ноябрь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TM$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*ноябрь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* ноябрь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*ноябрь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TN$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 5*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 5*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*декабрь
+Сл. КИПиА 5*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*декабрь
+Сл. КИПиА 5*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*декабрь
+Сл. КИПиА 5*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TO$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Сл. КИПиА 6*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Сл. КИПиА 6*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*декабрь
+Сл. КИПиА 6*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""*декабрь
+Сл. КИПиА 6*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""*декабрь
+Сл. КИПиА 6*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TP$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер КИПиА*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер КИПиА*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""* декабрь
+Инженер КИПиА*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* декабрь
+Инженер КИПиА*"")+(SUMIFS($JI3:$KV3,$JI$2:$KV$2,""* декабрь
+Инженер КИПиА*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TQ$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*декабрь
+Инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* декабрь
+Инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*декабрь
+Инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TR$3").Value = =((SUMIFS($BI3:$BL3,$BI$2:$BL$2,""*Ведущий инженер АСУ ТП*"")/12)+(SUMIFS($BM3:$BO3,$BM$2:$BO$2,""*Ведущий инженер АСУ ТП*"")/12)+SUMIFS($CH3:$EO3,$CH$2:$EO$2,""*декабрь
+Ведущий инженер АСУ ТП*"")+SUMIFS($FV3:$GS3,$FV$2:$GS$2,""* декабрь
+Ведущий инженер АСУ ТП*"")+(SUMIFS($OF3:$PC3,$OF$2:$PC$2,""*декабрь
+Ведущий инженер АСУ ТП*"")))*(1+$QD3)*(1+$QM3+$QS3)
+Range("$TS$3").Value = =SUM(TT3:TX3)
+Range("$TT$3").Value = =QZ3/1970
+Range("$TU$3").Value = =RA3/1970
+Range("$TV$3").Value = =RB3/1970
+Range("$TW$3").Value = =RC3/1970
+Range("$TX$3").Value = =RD3/1970
+Range("$TY$3").Value = =SUM(TZ3:UD3)
+Range("$TZ$3").Value = =QZ3*Нормы!$BC$7
+Range("$UA$3").Value = =RA3*Нормы!$BC$6
+Range("$UB$3").Value = =RB3*Нормы!$BC$5
+Range("$UC$3").Value = =RC3*Нормы!$BC$5
+Range("$UD$3").Value = =RD3*Нормы!$BC$4
+Range("$UE$3").Value = =SUM(UF3:UQ3)
+Range("$UF$3").Value = =ROUND((RK3*Нормы!$BC$7)+(RL3*Нормы!$BC$6)+(RM3*Нормы!$BC$5)+(RN3*Нормы!$BC$5)+(RO3*Нормы!$BC$4),0)
+Range("$UG$3").Value = =ROUND((RP3*Нормы!$BC$7)+(RQ3*Нормы!$BC$6)+(RR3*Нормы!$BC$5)+(RS3*Нормы!$BC$5)+(RT3*Нормы!$BC$4),0)
+Range("$UH$3").Value = =ROUND((RU3*Нормы!$BC$7)+(RV3*Нормы!$BC$6)+(RW3*Нормы!$BC$5)+(RX3*Нормы!$BC$5)+(RY3*Нормы!$BC$4),0)
+Range("$UI$3").Value = =ROUND((RZ3*Нормы!$BC$7)+(SA3*Нормы!$BC$6)+(SB3*Нормы!$BC$5)+(SC3*Нормы!$BC$5)+(SD3*Нормы!$BC$4),0)
+Range("$UJ$3").Value = =ROUND((SE3*Нормы!$BC$7)+(SF3*Нормы!$BC$6)+(SG3*Нормы!$BC$5)+(SH3*Нормы!$BC$5)+(SI3*Нормы!$BC$4),0)
+Range("$UK$3").Value = =ROUND((SJ3*Нормы!$BC$7)+(SK3*Нормы!$BC$6)+(SL3*Нормы!$BC$5)+(SM3*Нормы!$BC$5)+(SN3*Нормы!$BC$4),0)
+Range("$UL$3").Value = =ROUND((SO3*Нормы!$BC$7)+(SP3*Нормы!$BC$6)+(SQ3*Нормы!$BC$5)+(SR3*Нормы!$BC$5)+(SS3*Нормы!$BC$4),0)
+Range("$UM$3").Value = =ROUND((ST3*Нормы!$BC$7)+(SU3*Нормы!$BC$6)+(SV3*Нормы!$BC$5)+(SW3*Нормы!$BC$5)+(SX3*Нормы!$BC$4),0)
+Range("$UN$3").Value = =ROUND((SY3*Нормы!$BC$7)+(SZ3*Нормы!$BC$6)+(TA3*Нормы!$BC$5)+(TB3*Нормы!$BC$5)+(TC3*Нормы!$BC$4),0)
+Range("$UO$3").Value = =ROUND((TD3*Нормы!$BC$7)+(TE3*Нормы!$BC$6)+(TF3*Нормы!$BC$5)+(TG3*Нормы!$BC$5)+(TH3*Нормы!$BC$4),0)
+Range("$UP$3").Value = =ROUND((TI3*Нормы!$BC$7)+(TJ3*Нормы!$BC$6)+(TK3*Нормы!$BC$5)+(TL3*Нормы!$BC$5)+(TM3*Нормы!$BC$4),0)
+Range("$UQ$3").Value = =ROUND((TN3*Нормы!$BC$7)+(TO3*Нормы!$BC$6)+(TP3*Нормы!$BC$5)+(TQ3*Нормы!$BC$5)+(TR3*Нормы!$BC$4),0)
+Range("$UR$3").Value = =(EY3+GX3)*QE3*(1+$QM3+$QS3)
+Range("$US$3").Value = =(EZ3)*QE3*(1+$QM3+$QS3)
+Range("$UT$3").Value = =(FA3+GY3)*QE3*(1+$QM3+$QS3)
+Range("$UU$3").Value = =(FB3+PV3)*QE3*(1+$QM3+$QS3)
+Range("$UV$3").Value = =(FC3+PW3)*$QE3*(1+$QM3+$QS3)
+Range("$UW$3").Value = =ROUND((UR3*Нормы!$BC$7)+(US3*Нормы!$BC$6)+(UT3*Нормы!$BC$5)+(UU3*Нормы!$BC$5)+(UV3*Нормы!$BC$4),0)
+End Sub
